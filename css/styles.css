@@ -1,0 +1,132 @@
+.logo {
+    width: 7%;
+    height: auto;
+    border-radius: 20%;
+    margin-right: 35cm;
+}
+
+.navbar{
+
+    background-color: #ff000000;
+    font-weight: bolder;
+}
+
+.navbar a {
+
+    color: red;
+}
+
+.menu {
+    font-size: 150%;
+}
+
+header {
+    margin-top: -3%;
+}
+
+body {
+    height: 100%; /* La sección ocupa toda la altura */
+    background-image: url(../img/fondotienda.jpg); /* URL de la imagen de fondo */
+    background-size: cover; /* La imagen cubrirá todo el espacio */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.descripcion{
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 0.5%;
+}
+
+.fondoempresa {
+    background-image: url(../img/fondotienda.jpg);
+    background-size: 100%;
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.margenspider {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: -4.5%;
+}
+
+.margencol3 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.margencol2 {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: -4.5%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex1 {
+    display: flex;
+}
+
+.col3 {
+    width: 33%;
+}
+
+.imgcol3 {
+    width: 100%;
+    height: 90%;
+}
+
+.col2 {
+    width: 50%;
+}
+
+.imgcol2 {
+    width: 100%;
+    height: 90%;
+}
+
+footer {
+    background-color: #ff000000;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: -4%;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px){
+    .col3 {
+        width: 50%;
+        text-align: center;
+        margin-left: 25%;
+    }
+    
+    .flex{
+        display: block; 
+    }
+
+    .col2 {
+        width: 100%;
+    }
+
+    body {
+        background-image: url(../img/fondotienda.jpg);
+        height: 100%;
+        color: rgb(0, 0, 0);
+        font-size: 150%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        text-align: center;
+        background-repeat:round;
+    }
+
+}
