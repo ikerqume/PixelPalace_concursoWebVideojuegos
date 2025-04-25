@@ -1,0 +1,477 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh; /* Cambiado a min-height en lugar de height */
+  background-image: url('../img/ftotiendajuegos.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+  color: rgb(0, 0, 0);
+  font-size: 120%;
+  padding-top: 2%;
+  padding-bottom: 20px; /* Espacio reducido al final */
+  text-align: center;
+  line-height: 1.6;
+  overflow-y: auto; /* Permitir scroll vertical */
+}
+
+/* Header y navegación - ajustado para menú a la derecha */
+.logo {
+  width: 7%;
+  height: auto;
+  border-radius: 20%;
+  min-width: 50px; /* Tamaño mínimo para evitar que sea demasiado pequeño */
+}
+
+.navbar {
+  background-color: rgba(255, 0, 0, 0); /* Fondo transparente */
+  font-weight: bolder;
+}
+
+.navbar a {
+  color: red;
+}
+
+/* Ajustes para el menú a la derecha como en la página principal */
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  margin-right: 35px;
+}
+
+.nav-link, .dropdown-item {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .dropdown-item:hover {
+  color: #ff4545;
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  background-color: rgba(33, 33, 48, 0.9);
+  border: 1px solid #333340;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #333340;
+}
+
+/* Contenedor principal ajustado */
+.bo {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 400px; /* Altura mínima en lugar de fija */
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titulo h1 {
+  font-size: 2.5rem;
+  color: #ff4545;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Layout de filas y columnas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  min-height: 400px; /* Altura mínima en lugar de fija */
+}
+
+.row1 {
+  gap: 25px;
+  align-items: flex-start; /* Cambiado para mejor alineación en móviles */
+}
+
+.col2-right1 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.col2-right {
+  flex: 2;
+  min-width: 300px;
+  background-color: rgba(25, 25, 35, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  overflow-y: auto; /* Permite scroll interno si es necesario */
+}
+
+/* Imagen */
+.img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 69, 69, 0.4);
+}
+
+/* Flexbox para detalles y valoración */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.media1, .media2 {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Estilos para los detalles */
+.media1 h2, .media2 h2 {
+  color: #ff4545;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff4545;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.media1 ul {
+  list-style-type: none;
+}
+
+.media1 li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  text-align: left; /* Alineación a la izquierda para mejor legibilidad */
+}
+
+.media1 li:before {
+  content: "•";
+  color: #ff4545;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.media1 li strong {
+  color: #ff4545;
+  margin-right: 5px;
+}
+
+/* Estilos para la valoración */
+.rating {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.precio {
+  background-color: rgba(30, 30, 40, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #ff4545;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px; /* Espacio adicional abajo */
+}
+
+.precio:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.precio h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+.precio h2 {
+  font-size: 1.8rem;
+  color: #ff4545;
+  border-bottom: none;
+}
+
+/* Botón de compra */
+.btn-comprar {
+  background-color: #ff4545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #ff2525;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 69, 69, 0.4);
+}
+
+/* Footer ACTUALIZADO - normal y que se mueve con el scroll */
+footer {
+  background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+  text-align: center;
+  padding: 15px;
+  position: static; /* Posición normal en el flujo del documento */
+  width: 100%;
+  margin-top: 30px; /* Espacio arriba del footer */
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff0000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Añadir sombra para legibilidad */
+  letter-spacing: 1px;
+}
+
+/* Estilos específicos para el header y navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+  font-weight: bolder;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Esta es la clave para poner el menú a la derecha */
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Esto asegura que el botón colapsable en móviles esté a la derecha */
+.navbar-toggler {
+  margin-left: auto;
+  background-color: rgba(255, 0, 0, 0.1); /* Fondo casi transparente pero con un toque rojo */
+  border-color: #ff4545;
+}
+
+/* Forzar contenido a la derecha */
+#navbarSupportedContent {
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+}
+
+.navbar-nav {
+  margin-left: auto !important;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link, .dropdown-item {
+  color: red !important;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+}
+
+.nav-link:hover, .dropdown-item:hover {
+  color: #ff4545 !important;
+  transform: scale(1.05);
+}
+
+/* Ajustar espaciado en elementos de navegación */
+.nav-item {
+  margin-left: 20px;
+}
+
+/* Asegurar que el dropdown aparezca correctamente */
+.dropdown-menu {
+  right: 0;
+  left: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente para legibilidad */
+  border: 1px solid #ff4545; /* Borde rojo para coincidir con el tema */
+}
+
+.dropdown-item {
+  color: red !important;
+  padding: 8px 20px;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #ff4545;
+}
+
+/* Ajustes específicos para móviles */
+@media screen and (max-width: 991px) {
+  .logo {
+    width: 15%;
+  }
+  
+  #navbarSupportedContent {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mejorar legibilidad */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.3); /* Borde sutil rojo */
+    width: 100%; /* Asegurar que ocupa todo el ancho disponible */
+  }
+  
+  .navbar-nav {
+    align-items: center; /* Centrado vertical */
+    width: 100%; /* Ocupar todo el espacio disponible */
+  }
+  
+  .nav-item {
+    margin: 8px 0; /* Espacio vertical entre elementos */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Texto centrado */
+  }
+  
+  .dropdown-menu {
+    position: static !important; /* Evitar que se posicione de forma absoluta */
+    float: none; /* Evitar flotado */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Texto centrado */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+}
+
+/* Responsive mejorado */
+@media screen and (max-width: 768px) {
+  body {
+    padding-bottom: 20px; /* Espacio reducido al final */
+    font-size: 110%; /* Fuente ligeramente más pequeña en móvil */
+  }
+  
+  .logo {
+    width: 15%;
+    min-width: 40px;
+    margin-right: 2%;
+  }
+  
+  .row {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .row1 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .col2-right1, .col2-right {
+    flex: 100%;
+    width: 100%;
+  }
+  
+  .titulo h1 {
+    font-size: 1.8rem;
+  }
+  
+  .img {
+    max-height: 300px;
+  }
+  
+  .flex {
+    flex-direction: column;
+  }
+  
+  .media1, .media2 {
+    width: 100%;
+  }
+  
+  .precio {
+    margin: 10px 0;
+  }
+  
+  .precio h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Navbar específico para móvil */
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .navbar-toggler {
+    padding: 6px 10px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  }
+}
+
+/* Para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 100%;
+  }
+  
+  .titulo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .col2-right {
+    padding: 15px;
+  }
+  
+  .media1 h2, .media2 h2 {
+    font-size: 1.3rem;
+  }
+  
+  .precio h1 {
+    font-size: 1rem;
+  }
+  
+  .precio h2 {
+    font-size: 1.3rem;
+  }
+  
+  .btn-comprar {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .nav-item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* Asegurar que el dropdown en móviles pequeños se vea bien */
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+  .dropdown-item {
+    padding: 8px 15px;
+    text-align: center;
+  }
+}
